@@ -36,9 +36,10 @@ class ListenServer
     /**
      * ListenQueries constructor.
      */
-    public function __construct(string $uri)
+    public function __construct()
     {
         $this->loop = Factory::create();
+        $uri = config('query-monitor.uri', '0.0.0.0:1605');
         $this->socket = new Server($uri, $this->loop);
     }
 

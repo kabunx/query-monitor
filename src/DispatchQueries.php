@@ -45,11 +45,11 @@ class DispatchQueries
     /**
      * DispatchQueries constructor.
      */
-    public function __construct(string $uri)
+    public function __construct()
     {
         $this->loop = Factory::create();
         $this->connector = new Connector($this->loop);
-        $this->uri = $uri;
+        $this->uri = config('query-monitor.uri', '0.0.0.0:1605');
     }
 
     /**
