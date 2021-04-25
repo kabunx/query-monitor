@@ -7,5 +7,6 @@
 如果需要配置本地监听端口
 
 ```php 
-php artisan query:monitor
+php artisan query:monitor --dev
 ```
+
