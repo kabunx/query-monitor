@@ -1,0 +1,39 @@
+{
+    "name": "z-golly/query-monitor",
+    "description": "Laravel SQL monitor",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jonathan",
+            "email": "jianyang1209@outlook.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "laravel/framework": "^8.0",
+        "react/socket": "^1.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Golly\\QueryMonitor\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Golly\\QueryMonitor\\QueryServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
