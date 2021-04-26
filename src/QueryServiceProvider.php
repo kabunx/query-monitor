@@ -30,8 +30,7 @@ class QueryServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../config/query-monitor.php' => config_path('query-monitor.php'),
         ]);
-        $uri = config('query-monitor.uri');
-        $dispatch = new DispatchQueries($uri);
+        $dispatch = new DispatchQueries();
         $dispatch->init($this->app);
         DB::listen(function ($query) use ($dispatch) {
             $dispatch->query($query);
